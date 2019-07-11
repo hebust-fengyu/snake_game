@@ -17,7 +17,7 @@ dll: snake.o
 
 
 snake.o: snake.cpp
-	g++ -std=c++11 -fPIC -c snake.cpp -o snake.o -I include
+	g++ -std=c++11 -fPIC -c $(obj) -o snake.o -I include
 
 	
 cls:

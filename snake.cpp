@@ -230,24 +230,26 @@ int snake_food::run(){
 
 
 void snake_food::change_tail(){
-	switch (array[pTail->x][pTail->y])
+	int old_inter = array[pTail->x][pTail->y];
+	array[pTail->x][pTail->y] = type_none;
+	switch (old_inter)
 	{
 		case type_down:
-			array[pTail->x][pTail->y] = type_none;
+			
 			pTail->x += 1;
 			break;
 		
 		case type_up:
-			array[pTail->x][pTail->y] = type_none;
+
 			pTail->x -= 1;
 			break;
 		case type_left:
-			array[pTail->x][pTail->y] = type_none;
+
 			pTail->y -= 1;
 			break;
 
 		case type_right:
-			array[pTail->x][pTail->y] = type_none;
+
 			pTail->y += 1;
 			break;
 	}
